@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		7AF1712217319229003270A1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1712117319229003270A1 /* main.cpp */; };
 		7AF1712417319229003270A1 /* ShuttleAnalyzer.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7AF1712317319229003270A1 /* ShuttleAnalyzer.1 */; };
+		7AF1713017319701003270A1 /* RDCard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1712E17319701003270A1 /* RDCard.cpp */; };
+		7AF1713317319740003270A1 /* RDShuttler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1713117319740003270A1 /* RDShuttler.cpp */; };
+		7AF171361731974F003270A1 /* RDResolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AF171341731974F003270A1 /* RDResolver.cpp */; };
+		7AF1713917319766003270A1 /* RDRound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1713717319766003270A1 /* RDRound.cpp */; };
+		7AF1713C1731979B003270A1 /* RDHashable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1713A1731979B003270A1 /* RDHashable.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +33,20 @@
 		7AF1711E17319229003270A1 /* ShuttleAnalyzer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ShuttleAnalyzer; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF1712117319229003270A1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		7AF1712317319229003270A1 /* ShuttleAnalyzer.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ShuttleAnalyzer.1; sourceTree = "<group>"; };
+		7AF1712A17319258003270A1 /* RDItemsContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RDItemsContainer.cpp; sourceTree = "<group>"; };
+		7AF1712B17319258003270A1 /* RDItemsContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDItemsContainer.h; sourceTree = "<group>"; };
+		7AF1712E17319701003270A1 /* RDCard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RDCard.cpp; sourceTree = "<group>"; };
+		7AF1712F17319701003270A1 /* RDCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDCard.h; sourceTree = "<group>"; };
+		7AF1713117319740003270A1 /* RDShuttler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RDShuttler.cpp; sourceTree = "<group>"; };
+		7AF1713217319740003270A1 /* RDShuttler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDShuttler.h; sourceTree = "<group>"; };
+		7AF171341731974F003270A1 /* RDResolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RDResolver.cpp; sourceTree = "<group>"; };
+		7AF171351731974F003270A1 /* RDResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDResolver.h; sourceTree = "<group>"; };
+		7AF1713717319766003270A1 /* RDRound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RDRound.cpp; sourceTree = "<group>"; };
+		7AF1713817319766003270A1 /* RDRound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDRound.h; sourceTree = "<group>"; };
+		7AF1713A1731979B003270A1 /* RDHashable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RDHashable.cpp; sourceTree = "<group>"; };
+		7AF1713B1731979B003270A1 /* RDHashable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDHashable.h; sourceTree = "<group>"; };
+		7AF1713F173199BA003270A1 /* RDItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RDItem.cpp; sourceTree = "<group>"; };
+		7AF17140173199BA003270A1 /* RDItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDItem.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +81,54 @@
 			children = (
 				7AF1712117319229003270A1 /* main.cpp */,
 				7AF1712317319229003270A1 /* ShuttleAnalyzer.1 */,
+				7AF1712D173196EA003270A1 /* Classes */,
 			);
 			path = ShuttleAnalyzer;
+			sourceTree = "<group>";
+		};
+		7AF1712D173196EA003270A1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7AF1714217319B3E003270A1 /* Container */,
+				7AF1713E17319900003270A1 /* High Level Classes */,
+				7AF1712E17319701003270A1 /* RDCard.cpp */,
+				7AF1712F17319701003270A1 /* RDCard.h */,
+				7AF1713717319766003270A1 /* RDRound.cpp */,
+				7AF1713817319766003270A1 /* RDRound.h */,
+				7AF1713D173198E9003270A1 /* Supporting Classes */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		7AF1713D173198E9003270A1 /* Supporting Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7AF1713A1731979B003270A1 /* RDHashable.cpp */,
+				7AF1713B1731979B003270A1 /* RDHashable.h */,
+			);
+			name = "Supporting Classes";
+			sourceTree = "<group>";
+		};
+		7AF1713E17319900003270A1 /* High Level Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7AF171341731974F003270A1 /* RDResolver.cpp */,
+				7AF171351731974F003270A1 /* RDResolver.h */,
+				7AF1713117319740003270A1 /* RDShuttler.cpp */,
+				7AF1713217319740003270A1 /* RDShuttler.h */,
+			);
+			name = "High Level Classes";
+			sourceTree = "<group>";
+		};
+		7AF1714217319B3E003270A1 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				7AF1713F173199BA003270A1 /* RDItem.cpp */,
+				7AF17140173199BA003270A1 /* RDItem.h */,
+				7AF1712A17319258003270A1 /* RDItemsContainer.cpp */,
+				7AF1712B17319258003270A1 /* RDItemsContainer.h */,
+			);
+			name = Container;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +183,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AF1712217319229003270A1 /* main.cpp in Sources */,
+				7AF1713017319701003270A1 /* RDCard.cpp in Sources */,
+				7AF1713317319740003270A1 /* RDShuttler.cpp in Sources */,
+				7AF171361731974F003270A1 /* RDResolver.cpp in Sources */,
+				7AF1713917319766003270A1 /* RDRound.cpp in Sources */,
+				7AF1713C1731979B003270A1 /* RDHashable.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
