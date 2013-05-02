@@ -24,7 +24,17 @@ int main(int argc, const char * argv[])
     }
     
     //parse input parameters
-    int numberOfCards = 409;
+    const char* cardsNumCString = argv[1];
+    
+    int numberOfCards = 0;
+    
+    sscanf(cardsNumCString, "%d", &numberOfCards);
+    
+    if(numberOfCards==0 || numberOfCards > 100000)
+    {
+        std::cout << "Please provide valid number of card to shuttle. Provided ["<< numberOfCards << "]\n";
+        return -1;
+    }
     
     //validate input parameters
     std::cout << "Will shutle a set of [" << numberOfCards << "] cards.\n";
