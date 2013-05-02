@@ -15,10 +15,14 @@
 class RDCard: public RDHashable
 {
     char*       iIdentifier;
-    size_t      iIndex;
+    int         iIndex;
     
 public:
-    virtual char*   generateHash();
+    RDCard();
+    RDCard(char* identifier,int index);
+    ~RDCard();
+    
+    virtual unsigned int generateHash();
 };
 
 #endif /* defined(__ShuttleAnalyzer__RDCard__) */

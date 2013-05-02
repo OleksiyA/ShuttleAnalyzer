@@ -14,15 +14,21 @@
 
 template<typename T> class RDItem: public RDHashable
 {
-    T*          iContent;
+    T*                  iContent;
+    RDItem<T>*          iNext;
     
 public:
     RDItem();
+    RDItem(T* content);
+    ~RDItem();
     
     T* content();
     void setContent(T* newContent);
     
-    virtual char*   generateHash();
+    RDItem<T>* next();
+    void setNext(RDItem<T>* newNext);
+    
+    virtual unsigned int generateHash();
 };
 
 #include "RDItem.cpp"

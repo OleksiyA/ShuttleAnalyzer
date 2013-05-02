@@ -8,6 +8,25 @@
 
 #include "RDItem.h"
 
+template<typename T> RDItem<T>::RDItem()
+{
+    this->iContent = NULL;
+    this->iNext = NULL;
+}
+
+template<typename T> RDItem<T>::RDItem(T* content):iContent(content)
+{
+    this->iNext = NULL;
+}
+
+template<typename T> RDItem<T>::~RDItem()
+{
+    delete this->iContent;
+    this->iContent = NULL;
+    delete this->iNext;
+    this->iNext = NULL;
+}
+
 template<typename T> T* RDItem<T>::content()
 {
     return this->iContent;
@@ -15,18 +34,22 @@ template<typename T> T* RDItem<T>::content()
 
 template<typename T> void RDItem<T>::setContent(T* newContent)
 {
-    delete this->iContent;
-    
     this->iContent = newContent;
 }
 
-template<typename T> RDItem<T>::RDItem()
+template<typename T> RDItem<T>* RDItem<T>::next()
 {
-    this->iContent = NULL;
+    return this->iNext;
+}
+
+template<typename T> void RDItem<T>::setNext(RDItem<T>* newNext)
+{
+    this->iNext = newNext;
 }
 
 #pragma mark RDHashable methods
-template<typename T> char*   RDItem<T>::generateHash()
+template<typename T> unsigned int RDItem<T>::generateHash()
 {
-    return NULL;
+    unsigned int hash = this->iContent->generateHash();
+    return hash;
 }

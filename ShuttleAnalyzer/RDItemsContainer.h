@@ -15,13 +15,24 @@
 
 template<typename T> class RDItemsContainer:public RDHashable
 {
+    RDItem<T>*              iListHead;
+    RDItem<T>*              iListTail;
     
 public:
     RDItemsContainer();
     RDItemsContainer(RDItemsContainer<T>& copyFromContainer);
     RDItemsContainer(int numberOfItems);
     
-    virtual char*   generateHash();
+    RDItemsContainer& operator=(const RDItemsContainer& rhs);
+    
+    virtual ~RDItemsContainer();
+    
+    virtual unsigned int generateHash();
+    
+    void addItemToTheTop(T* item);
+    void addItemToTheEnd(T* item);
+    T* removeTopItem();
+    T* itemAtIndex(int index);
 };
 
 #include "RDItemsContainer.cpp"

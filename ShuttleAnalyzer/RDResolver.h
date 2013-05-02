@@ -16,9 +16,13 @@
 class RDResolver
 {
     RDItemsContainer<RDCard>        iCards;
+    unsigned int                    iExpectedCardsHash;
+    int                             iNumberOfRoundDone;
     
 public:
-    
+    RDResolver(RDItemsContainer<RDCard>& cards,unsigned int expectedCardsHash);
+    bool resolve(int maxRoundsLimit);
+    int numberOfRoundsDone();
 };
 
 #endif /* defined(__ShuttleAnalyzer__RDResolver__) */

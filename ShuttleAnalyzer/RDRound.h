@@ -10,5 +10,18 @@
 #define __ShuttleAnalyzer__RDRound__
 
 #include <iostream>
+#include "RDItemsContainer.h"
+#include "RDCard.h"
+
+class RDRound
+{
+    RDItemsContainer<RDCard>        iInputCards;
+    RDItemsContainer<RDCard>        iOutputCards;
+    
+public:
+    RDRound(RDItemsContainer<RDCard>& input);
+    void run();
+    RDItemsContainer<RDCard>* roundResult();
+};
 
 #endif /* defined(__ShuttleAnalyzer__RDRound__) */

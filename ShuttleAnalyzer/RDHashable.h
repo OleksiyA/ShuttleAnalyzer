@@ -14,10 +14,10 @@
 class RDHashable
 {
 protected:
-    char*   generateHashForData(const char* data);
+    unsigned int generateHashForString(const char* string);
     
 public:
-    virtual char*   generateHash();
+    virtual unsigned int generateHash();
 };
 
 #endif /* defined(__ShuttleAnalyzer__RDHashable__) */
