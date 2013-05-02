@@ -15,7 +15,7 @@ int main(int argc, const char * argv[])
 {
 
     // insert code here...
-    std::cout << "Shuttle Analyzer started.\n";
+    std::cout << "Shuttle Analyzer started. Written by Oleksiy Ivanov <oleksiy@effectivedeveloper.com>\n";
     
     if(argc<2)
     {
