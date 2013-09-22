@@ -3,7 +3,8 @@
 //  ShuttleAnalyzer
 //
 //  Created by Oleksiy Ivanov on 5/1/13.
-//  Copyright (c) 2013 Oleksiy Ivanov. All rights reserved.
+//  Copyright (c) 2013 Oleksiy Ivanov.
+//  The MIT License (MIT).
 //
 
 #include "RDResolver.h"
@@ -16,8 +17,7 @@ RDResolver::RDResolver(RDItemsContainer<RDCard>& cards,unsigned int expectedCard
 
 bool RDResolver::resolve(int maxRoundsLimit)
 {
-    for(int i = 0; i < maxRoundsLimit; i++)
-    {
+    for (int i = 0; i < maxRoundsLimit; i++) {
         iNumberOfRoundDone++;
         
         RDRound round (this->iCards);
@@ -29,8 +29,7 @@ bool RDResolver::resolve(int maxRoundsLimit)
         unsigned int hashForCurrentCombination = this->iCards.generateHash();
         
         //assuming has will be shorter than 1000 chars
-        if(hashForCurrentCombination == this->iExpectedCardsHash)
-        {
+        if (hashForCurrentCombination == this->iExpectedCardsHash) {
             //resolved OK
             return true;
         }

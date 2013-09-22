@@ -3,7 +3,8 @@
 //  ShuttleAnalyzer
 //
 //  Created by Oleksiy Ivanov on 5/1/13.
-//  Copyright (c) 2013 Oleksiy Ivanov. All rights reserved.
+//  Copyright (c) 2013 Oleksiy Ivanov.
+//  The MIT License (MIT).
 //
 
 #ifndef __ShuttleAnalyzer__RDCard__
@@ -14,12 +15,12 @@
 
 class RDCard: public RDHashable
 {
-    char*       iIdentifier;
-    int         iIndex;
+    char *iIdentifier;
+    int iIndex;
     
 public:
     RDCard();
-    RDCard(char* identifier,int index);
+    RDCard(char *identifier,int index);
     ~RDCard();
     
     virtual unsigned int generateHash();

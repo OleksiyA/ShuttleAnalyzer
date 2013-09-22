@@ -3,7 +3,8 @@
 //  ShuttleAnalyzer
 //
 //  Created by Oleksiy Ivanov on 5/1/13.
-//  Copyright (c) 2013 Oleksiy Ivanov. All rights reserved.
+//  Copyright (c) 2013 Oleksiy Ivanov.
+//  The MIT License (MIT).
 //
 
 #ifndef __ShuttleAnalyzer__RDHashable__
@@ -14,7 +15,7 @@
 class RDHashable
 {
 protected:
-    unsigned int generateHashForString(const char* string);
+    unsigned int generateHashForString(const char *string);
     
 public:
     virtual unsigned int generateHash();

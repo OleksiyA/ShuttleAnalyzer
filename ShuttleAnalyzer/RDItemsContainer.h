@@ -3,7 +3,8 @@
 //  ShuttleAnalyzer
 //
 //  Created by Oleksiy Ivanov on 5/1/13.
-//  Copyright (c) 2013 Oleksiy Ivanov. All rights reserved.
+//  Copyright (c) 2013 Oleksiy Ivanov.
+//  The MIT License (MIT).
 //
 
 #ifndef __ShuttleAnalyzer__RDItemsContainer__
@@ -15,8 +16,8 @@
 
 template<typename T> class RDItemsContainer:public RDHashable
 {
-    RDItem<T>*              iListHead;
-    RDItem<T>*              iListTail;
+    RDItem<T> *iListHead;
+    RDItem<T> *iListTail;
     
 public:
     RDItemsContainer();
@@ -31,8 +32,8 @@ public:
     
     void addItemToTheTop(T* item);
     void addItemToTheEnd(T* item);
-    T* removeTopItem();
-    T* itemAtIndex(int index);
+    T *removeTopItem();
+    T *itemAtIndex(int index);
 };
 
 #include "RDItemsContainer.cpp"

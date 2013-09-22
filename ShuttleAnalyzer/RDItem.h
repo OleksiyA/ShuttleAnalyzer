@@ -3,7 +3,8 @@
 //  ShuttleAnalyzer
 //
 //  Created by Oleksiy Ivanov on 5/1/13.
-//  Copyright (c) 2013 Oleksiy Ivanov. All rights reserved.
+//  Copyright (c) 2013 Oleksiy Ivanov.
+//  The MIT License (MIT).
 //
 
 #ifndef __ShuttleAnalyzer__RDItem__
@@ -14,19 +15,19 @@
 
 template<typename T> class RDItem: public RDHashable
 {
-    T*                  iContent;
-    RDItem<T>*          iNext;
+    T *iContent;
+    RDItem<T> *iNext;
     
 public:
     RDItem();
-    RDItem(T* content);
+    RDItem(T *content);
     ~RDItem();
     
     T* content();
-    void setContent(T* newContent);
+    void setContent(T *newContent);
     
     RDItem<T>* next();
-    void setNext(RDItem<T>* newNext);
+    void setNext(RDItem<T> *newNext);
     
     virtual unsigned int generateHash();
 };
